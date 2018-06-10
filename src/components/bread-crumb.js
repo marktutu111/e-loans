@@ -24,6 +24,7 @@ import {
  }
 
 
+ 
  const styles = StyleSheet.create({
     statusStyle: {
         color: Colors.WHITE_COLOR,
