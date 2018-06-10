@@ -37,14 +37,14 @@ class TabsCard extends Component {
                                           onPress={() => this.onButtonTapped (0)}>
                             <EIcon name="exclamation" size={50}
                                    color={this.state.index === 0 ? colors.THEME_COLOR_LIGHT : colors.LIGHT_DARK_COLOR}/>
-                            <Text style={{color: this.state.index === 0 ? colors.DARK_COLOR : colors.LIGHT_DARK_COLOR, marginTop: 5}}>Loans</Text>
+                            <Text style={{color: this.state.index === 0 ? colors.DARK_COLOR : colors.LIGHT_DARK_COLOR, marginTop: 5}}>Wallet</Text>
                         </TouchableOpacity>
                         <TouchableOpacity activeOpacity={0.8} 
                                           style={styles.buttonContainer}
                                           onPress={() => this.onButtonTapped (1)}>
                             <EIcon name="exclamation" size={50}
                                    color={this.state.index === 1 ? colors.THEME_COLOR_LIGHT : colors.LIGHT_DARK_COLOR}/>
-                            <Text style={{color: this.state.index === 1 ? colors.DARK_COLOR : colors.LIGHT_DARK_COLOR, marginTop: 5}}>Wallet</Text>
+                            <Text style={{color: this.state.index === 1 ? colors.DARK_COLOR : colors.LIGHT_DARK_COLOR, marginTop: 5}}>Loans</Text>
                         </TouchableOpacity>
                     </View>
 

@@ -37,11 +37,15 @@ class LoanViewComponent extends Component {
 
                             </Modal>
 
-                            {/* <HeaderBar leftIcon="arrow-left" title="Loans"
-                                       onLeftPress={() => this.props.navigation.goBack()}/> */}
-
                             <View style={container}>
 
+                                <ListItem onPress={() => this.setState({openModal: true})}/>
+                                <ListItem onPress={() => this.setState({openModal: true})}/>
+                                <ListItem onPress={() => this.setState({openModal: true})}/>
+                                <ListItem onPress={() => this.setState({openModal: true})}/>
+                                <ListItem onPress={() => this.setState({openModal: true})}/>
+                                <ListItem onPress={() => this.setState({openModal: true})}/>
+                                <ListItem onPress={() => this.setState({openModal: true})}/>
                                 <ListItem onPress={() => this.setState({openModal: true})}/>
                                 <ListItem onPress={() => this.setState({openModal: true})}/>
 

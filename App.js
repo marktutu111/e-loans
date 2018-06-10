@@ -23,7 +23,7 @@ export default class App extends Component {
 
         render () {
 
-            return <WalletComponent />
+            return this.renderView();
             
         }
 

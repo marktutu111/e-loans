@@ -4,6 +4,7 @@ import {
     View,
     Text,
     Image,
+    Animated,
     ScrollView
  } from 'react-native';
 
@@ -24,17 +25,27 @@ class WalletComponent extends Component {
                     super(props);
 
                     this.state = {
-                         tabIndex: 0
+                         tabIndex: 0,
+                         scroll:  new Animated.Value(0)
                     }
+            }
+
+
+
+            onScroll (e)  {
+
+                let y = e.nativeEvent.contentOffset.y;
+                this.setState({ scroll: new Animated.Value(y) });
+
             }
 
 
             renderViews ()  {
 
                     switch (this.state.tabIndex) {
-                        case 0:
-                            return <LoanViewComponent />
                         case 1:
+                            return <LoanViewComponent />
+                        case 0:
                             return (
 
                                 <View>
@@ -66,15 +77,25 @@ class WalletComponent extends Component {
                                        title="Account" 
                                        onLeftPress={() => this.props.navigation.goBack()}/>
 
-                            <ScrollView style={styles.contents}>
+                            <ScrollView
+                                scrollEventThrottle={16} // <-- Use 1 here to make sure no events are ever missed
+                                onScroll={this.onScroll.bind(this)}
+                                style={styles.contents}>
 
                                     { this.renderViews() }
 
                             </ScrollView>
 
-                            <View style={styles.tabsStyle}>
+                            <Animated.View style={[styles.tabsStyle, {
+                                        transform: [{
+                                            translateY: this.state.scroll.interpolate({
+                                                inputRange: [0, 100],
+                                                outputRange: [1, 150]
+                                            })
+                                        }]
+                                    }]}>
                                 <TabsCard tabChanged={(index) => this.setState({tabIndex: index})}/>
-                            </View>
+                            </Animated.View>
 
 
 
@@ -115,7 +136,6 @@ class WalletComponent extends Component {
      contents: {
          flex: 1,
          width: '100%',
-         marginTop: 50,
      },
      tabsStyle: {
          position: 'absolute',
