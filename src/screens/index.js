@@ -6,3 +6,4 @@ export * from './profile/profile.component';
 export * from './edit-profile/edit-profile.component';
 export * from './reset-password/reset-password.component';
 export * from './wallet/wallet.component';
+export * from './get-loan/getloan.component'

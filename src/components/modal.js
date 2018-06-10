@@ -35,7 +35,7 @@ import Colors from "../resources/styles/colors";
                         <View style={container}>
 
                                 <View style={amountContainer}>
-                                    <Text style={amountStyle}>$300</Text>
+                                    <Text style={amountStyle}>Gh 300</Text>
                                     <Text style={amountLabel}>Amount</Text>
                                 </View>
                                 <View>
@@ -45,9 +45,7 @@ import Colors from "../resources/styles/colors";
                                     <Text style={dueDateLabelStyle}>Next payment date</Text>
                                 </View>
 
-                                <View style={cardContainer}>
-                                    <CreditCard />
-                                </View>
+                                <CreditCard />
 
                                 <Button title='Pay' style={buttonStyle}/>
 
@@ -65,9 +63,8 @@ import Colors from "../resources/styles/colors";
 
  const styles = StyleSheet.create({
         container: {
-            flex: 1,
             justifyContent: 'center',
-            alignItems: 'center'
+            alignItems: 'center',
         },
         amountContainer: {
             marginBottom: 40
@@ -88,7 +85,7 @@ import Colors from "../resources/styles/colors";
             borderWidth: 0.5,
             borderColor: Colors.LIGHT_GREY_COLOR,
             paddingLeft: 15,
-            paddingRight: 15
+            paddingRight: 15,
         },
         dueDateTextStyle: {
             color: Colors.ORANGE_COLOR,
@@ -98,13 +95,13 @@ import Colors from "../resources/styles/colors";
             textAlign: 'center',
             fontSize: 10,
             color: Colors.LIGHT_DARK_COLOR,
-            marginTop: 10
+            margin: 20,
         },
         cardContainer: {
-            marginTop: 50
+            marginTop: 30
         },
         buttonStyle: {
-            marginTop: 80,
+            marginTop: 60,
             marginBottom: 50,
             backgroundColor: Colors.DARK_COLOR,
             borderRadius: 2,
@@ -113,7 +110,10 @@ import Colors from "../resources/styles/colors";
             padding: 10,
         },
         closeButton: {
-            margin: 20,
+            width: 60,
+            height: 60,
+            marginRight: 'auto',
+            marginLeft: 'auto',
         }
  })
 

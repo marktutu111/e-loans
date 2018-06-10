@@ -38,7 +38,7 @@ class Button extends Component {
 const styles = StyleSheet.create({
     // Border button type by default
     default: {
-        height: 40,
+        height: 50,
         borderRadius: 2,
         backgroundColor: colors.THEME_COLOR,
         justifyContent: 'center',

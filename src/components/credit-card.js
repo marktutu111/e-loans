@@ -44,7 +44,7 @@ const CreditCard = () => {
  const styles = StyleSheet.create({
      container: {
          padding: 20,
-         backgroundColor: Colors.WHITE_COLOR,
+         backgroundColor: Colors.THEME_COLOR_LIGHT,
          width: '70%',
          borderRadius: 10,
          alignItems: 'center',
@@ -53,15 +53,17 @@ const CreditCard = () => {
          margin: 20,
          shadowOffset: {width: 1, height: 1},
          shadowColor: Colors.LIGHT_GREY_COLOR,
-         shadowOpacity: 0.3
+         shadowOpacity: 0.3,
+         elevation: 1
      },
      textKey: {
          textAlign: 'right',
-         color: Colors.LIGHT_DARK_COLOR
+         color: Colors.WHITE_COLOR,
+         opacity: 0.7,
      },
      textValue: {
          textAlign: 'left',
-         color: Colors.DARK_COLOR
+         color: Colors.LIGHT_DARK_COLOR
      },
      space: {
          marginTop: 3,

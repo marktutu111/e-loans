@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { MainRoute, AuthRoute } from "./src/app.routing";
 import { LoginService } from "./src/services";
-import { WalletComponent, HomeComponent } from "./src/screens";
+import { WalletComponent, HomeComponent, LoanViewComponent } from "./src/screens";
+import { ModalComponent } from "./src/components";
 
 
 

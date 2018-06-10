@@ -4,6 +4,7 @@ import { Container, HomeHeaderBar, HomeProfile, LazyAlert,
          Card } from "../../components";
 import Icon from "react-native-vector-icons/EvilIcons";
 import Colors from "../../resources/styles/colors";
+import colors from '../../resources/styles/colors';
 
 class HomeComponent extends Component {
 
@@ -32,7 +33,7 @@ class HomeComponent extends Component {
 
                     return (
 
-                        <Container>
+                        <Container style={{ backgroundColor: colors.THEME_COLOR_LIGHT }}>
 
                             <HomeProfile />
 
@@ -40,25 +41,25 @@ class HomeComponent extends Component {
 
                                 <View style={rowStyle}>
                                     <View style={colStyle}>
-                                        <Card title="Loans" description="Request loan" 
-                                              name="calendar" color={Colors.THEME_COLOR}
+                                        <Card title="Loan" description="Request loan" 
+                                              name="calendar" color={Colors.DARK_COLOR}
                                               onPress={() => this.props.navigation.navigate('Loans')}/>
                                     </View>
                                     <View style={colStyle}>
                                         <Card title="Account" description="Virtual Account" 
-                                              name="credit-card" color={Colors.THEME_COLOR}
+                                              name="credit-card" color={Colors.DARK_COLOR}
                                               onPress={() => this.props.navigation.navigate('Wallet')}/>
                                     </View>
                                 </View>
                                 <View style={rowStyle}>
                                     <View style={colStyle}>
                                         <Card title="Utilities" description="Pay bills and Send money"
-                                            name="arrow-down" color={Colors.THEME_COLOR}
+                                            name="arrow-down" color={Colors.DARK_COLOR}
                                             onPress={() => this.props.navigation.navigate('Terms')}/>
                                     </View>
                                     <View style={colStyle}>
                                         <Card title="Help" description="Need answers?"
-                                              name="arrow-up" color={Colors.THEME_COLOR}
+                                              name="arrow-up" color={Colors.DARK_COLOR}
                                               onPress={() => this.props.navigation.navigate('Help')}  />
                                     </View>
                                 </View>

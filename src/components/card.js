@@ -36,7 +36,9 @@ const styles = StyleSheet.create({
             backgroundColor: colors.WHITE_COLOR,
             padding: 15,
             borderRadius: 3,
-            elevation: 5
+            shadowColor: colors.DARK_COLOR,
+            shadowOpacity: 1,
+            shadowOffset: { width: 20, height: 20 },
         },
         iconContainer: {
             flex: 1,

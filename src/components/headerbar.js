@@ -43,8 +43,8 @@ import colors from '../resources/styles/colors';
             alignItems: 'center',
             justifyContent: Platform.OS === 'ios' ? 'center' : 'flex-start',
             padding: 10,
-            backgroundColor: colors.THEME_COLOR_LIGHT,
-            elevation: 2
+            backgroundColor: colors.THEME_COLOR,
+            // elevation: 2
         },
         textStyle: {
             fontSize: 20,

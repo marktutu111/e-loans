@@ -136,6 +136,7 @@ const styles = StyleSheet.create({
             color: Colors.DARK_COLOR,
             textAlign: 'center',
             margin: 20,
+            fontSize: 18
         },
         signupContainerStyle: {
             flexDirection: 'row',
@@ -149,7 +150,7 @@ const styles = StyleSheet.create({
             marginLeft: 5
         },
         resetPasswordButtonStyle: {
-            color: Colors.DARK_COLOR,
+            color: Colors.LIGHT_DARK_COLOR,
             fontSize: 12,
             marginTop: 5
         },
@@ -162,11 +163,12 @@ const styles = StyleSheet.create({
             marginLeft: 'auto'
         },
         navButtonsContainer: {
-            flex: 1,
-            justifyContent: 'center'
+            justifyContent: 'center',
+            marginTop: 80,
         },
         disabledButton: {
-            backgroundColor: colors.DARK_COLOR
+            backgroundColor: colors.DARK_COLOR,
+            height: 50
         }
 
 })
