@@ -3,6 +3,7 @@ import { TextInput,
          StyleSheet
 } from "react-native";
 import Colors from "../../resources/styles/colors";
+import colors from "../../resources/styles/colors";
 
 
 
@@ -31,7 +32,8 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         marginTop: 5,
         marginBottom: 5,
-        backgroundColor: Colors.WHITE_COLOR
+        backgroundColor: colors.WHITE_COLOR,
+        color: colors.DARK_COLOR
     }
 
 })

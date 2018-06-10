@@ -11,6 +11,7 @@ import FIcons from "react-native-vector-icons/FontAwesome";
 import Colors from "../../resources/styles/colors";
 import { validateEmail } from "../helpers";
 import { LoginService } from "../../services";
+import colors from '../../resources/styles/colors';
 
 
 
@@ -64,13 +65,10 @@ class LoginComponent extends Component {
                     <Container style={container}>
 
                             <View style={imageContainer}>
-                                <Image style={imageStyle} source={require('../../images/logo.png')}/>
+                                <Image style={imageStyle} source={require('../../images/gdl-logo.png')}/>
                             </View>
                             
-                            <View style={textContainer}>
-                                <Text style={textStyle1}>Welcome to Payworld</Text>
-                                <Text style={textStyle2}>Please login to continue.</Text>
-                            </View>
+                            <Text style={textStyle2}>Please login to continue.</Text>
 
                             <Input placeholder={'Email'} 
                                    editable={!this.state.loading}
@@ -83,7 +81,7 @@ class LoginComponent extends Component {
 
                             <Button title='login' 
                                     onPress={() => this.login()} 
-                                    style={ this.state.emailValid ? null : disabledButton }
+                                    style={disabledButton}
                                     disabled={ !this.state.emailValid }
                                     busy={ this.state.loading }/>
 
@@ -120,14 +118,13 @@ const styles = StyleSheet.create({
             backgroundColor: Colors.BACKGROUND_COLOR
         },
         imageContainer: {
-            width: 100,
-            height: 100,
-            borderRadius: 100,
+            width: 150,
+            height: 50,
             justifyContent: 'center',
             alignItems: 'center',
             marginRight: 'auto',
             marginLeft: 'auto',
-            margin: 50,
+            margin: 20,
             overflow: 'hidden'
         },
         imageStyle: {
@@ -135,17 +132,10 @@ const styles = StyleSheet.create({
             width: '100%',
             height: '100%',
         },
-        textContainer: {
-            marginBottom: 10
-        },
-        textStyle1: {
-            fontSize: 20,
-            paddingBottom: 5,
-            color: Colors.THEME_COLOR,
-            fontWeight: 'bold'
-        },
         textStyle2: {
-            color: Colors.LIGHT_DARK_COLOR
+            color: Colors.DARK_COLOR,
+            textAlign: 'center',
+            margin: 20,
         },
         signupContainerStyle: {
             flexDirection: 'row',
@@ -176,7 +166,7 @@ const styles = StyleSheet.create({
             justifyContent: 'center'
         },
         disabledButton: {
-            backgroundColor: Colors.LIGHT_GREY_COLOR
+            backgroundColor: colors.DARK_COLOR
         }
 
 })

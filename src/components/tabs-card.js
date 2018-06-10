@@ -36,24 +36,15 @@ class TabsCard extends Component {
                                           style={styles.buttonContainer}
                                           onPress={() => this.onButtonTapped (0)}>
                             <EIcon name="exclamation" size={50}
-                                   color={this.state.index === 0 ? colors.BLUE_COLOR : colors.LIGHT_DARK_COLOR}/>
-                            <Text style={{color: this.state.index === 0 ? colors.BLUE_COLOR : colors.LIGHT_DARK_COLOR}}>Loans</Text>
+                                   color={this.state.index === 0 ? colors.THEME_COLOR_LIGHT : colors.LIGHT_DARK_COLOR}/>
+                            <Text style={{color: this.state.index === 0 ? colors.DARK_COLOR : colors.LIGHT_DARK_COLOR, marginTop: 5}}>Loans</Text>
                         </TouchableOpacity>
-
                         <TouchableOpacity activeOpacity={0.8} 
                                           style={styles.buttonContainer}
                                           onPress={() => this.onButtonTapped (1)}>
                             <EIcon name="exclamation" size={50}
-                                   color={this.state.index === 1 ? colors.BLUE_COLOR : colors.LIGHT_DARK_COLOR}/>
-                            <Text style={{color: this.state.index === 1 ? colors.BLUE_COLOR : colors.LIGHT_DARK_COLOR}}>Payments</Text>
-                        </TouchableOpacity>
-
-                        <TouchableOpacity activeOpacity={0.8} 
-                                          style={styles.buttonContainer}
-                                          onPress={() => this.onButtonTapped (2)}>
-                            <EIcon name="exclamation" size={50} 
-                                   color={this.state.index === 2 ? colors.BLUE_COLOR : colors.LIGHT_DARK_COLOR}/>
-                            <Text style={{color: this.state.index === 2 ? colors.BLUE_COLOR : colors.LIGHT_DARK_COLOR}}>Bills</Text>
+                                   color={this.state.index === 1 ? colors.THEME_COLOR_LIGHT : colors.LIGHT_DARK_COLOR}/>
+                            <Text style={{color: this.state.index === 1 ? colors.DARK_COLOR : colors.LIGHT_DARK_COLOR, marginTop: 5}}>Wallet</Text>
                         </TouchableOpacity>
                     </View>
 
@@ -66,21 +57,24 @@ class TabsCard extends Component {
 const styles = StyleSheet.create({
         container: {
             backgroundColor: colors.WHITE_COLOR,
-            padding: 20,
+            padding: 10,
             flexDirection: 'row',
-            justifyContent: 'space-between',
+            justifyContent: 'space-around',
             alignItems: 'center',
-            width: '90%',
+            width: '60%',
             marginRight: 'auto',
             marginLeft: 'auto',
             borderRadius: 5,
-            shadowOffset: {width: 1, height: 1},
-            shadowColor: colors.LIGHT_GREY_COLOR,
-            shadowOpacity: 0.2
+            borderColor: colors.LIGHT_GREY_COLOR,
+            borderWidth: 0.5,
+            // elevation: 3
+            // shadowOffset: {width: 1, height: 1},
+            // shadowColor: colors.LIGHT_GREY_COLOR,
+            // shadowOpacity: 0.2
         },
         buttonContainer: {
             justifyContent: 'center',
-            alignItems: 'center'
+            alignItems: 'center',
         }
 })
 

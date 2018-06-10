@@ -27,14 +27,15 @@ import {
  const styles = StyleSheet.create({
     statusStyle: {
         color: Colors.WHITE_COLOR,
-        fontSize: 10
+        fontSize: 10,
+        opacity: 0.5,
     },
     statusContainer: {
         padding: 3,
         paddingLeft: 10,
         paddingRight: 10,
         borderRadius: 5,
-        backgroundColor: Colors.PENDING_COLOR,
+        backgroundColor: Colors.DARK_COLOR,
         width: 'auto'
     }
  })

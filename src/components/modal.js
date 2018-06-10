@@ -5,7 +5,7 @@ import {
     Text
  } from 'react-native';
 
-import { Container, HeaderBar, CreditCard, Button } from "../components";
+import { Container, HeaderBar, CreditCard, Button, IconButton } from "../components";
 import Colors from "../resources/styles/colors";
 
 
@@ -27,7 +27,11 @@ import Colors from "../resources/styles/colors";
 
                     <Container>
 
-                        <HeaderBar rightIcon="close" onRightPress={this.props.closeModal}/>
+                        <IconButton name="close"
+                                    size={25} 
+                                    onPress={this.props.closeModal}
+                                    style={styles.closeButton}/>
+
                         <View style={container}>
 
                                 <View style={amountContainer}>
@@ -100,12 +104,16 @@ import Colors from "../resources/styles/colors";
             marginTop: 50
         },
         buttonStyle: {
-            marginTop: 100,
+            marginTop: 80,
             marginBottom: 50,
-            backgroundColor: Colors.GREEN_COLOR,
-            borderRadius: 30,
-            width: '50%',
-            height: 30
+            backgroundColor: Colors.DARK_COLOR,
+            borderRadius: 2,
+            width: '70%',
+            height: 'auto',
+            padding: 10,
+        },
+        closeButton: {
+            margin: 20,
         }
  })
 

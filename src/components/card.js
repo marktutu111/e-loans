@@ -2,8 +2,8 @@ import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity,
          Dimensions } from 'react-native';
 
-import Colors from "../resources/styles/colors";
 import EIcon from 'react-native-vector-icons/EvilIcons';
+import colors from '../resources/styles/colors';
 
 
 
@@ -33,12 +33,10 @@ const styles = StyleSheet.create({
         cardContainer: {
             width: width / 2.3,
             height: 150,
-            backgroundColor: Colors.WHITE_COLOR,
+            backgroundColor: colors.WHITE_COLOR,
             padding: 15,
             borderRadius: 3,
-            shadowOffset: {width: 5, height: 10},
-            shadowOpacity: 0.3,
-            shadowColor: Colors.LIGHT_GREY_COLOR
+            elevation: 5
         },
         iconContainer: {
             flex: 1,
@@ -50,11 +48,11 @@ const styles = StyleSheet.create({
         },
         lableText1: {
             fontSize: 15,
-            color: Colors.LIGHT_DARK_COLOR,
+            color: colors.DARK_COLOR,
             fontWeight: 'bold'
         },
         lableText2: {
-            color: Colors.LIGHT_DARK_COLOR,
+            color: colors.LIGHT_DARK_COLOR,
             fontSize: 10,
             paddingTop: 2
         }

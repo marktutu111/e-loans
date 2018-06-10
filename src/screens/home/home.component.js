@@ -18,8 +18,8 @@ class HomeComponent extends Component {
             shareApp () {
 
                     Share.share({
-                        title: 'Payworld Microcredit',
-                        message: 'Download payworld microcredit app',
+                        title: 'Golden link Savings and Loans',
+                        message: 'Download E-loans app',
                         url: ''
                     })
 
@@ -34,35 +34,31 @@ class HomeComponent extends Component {
 
                         <Container>
 
-                            <HomeHeaderBar title="Payworld" 
-                                           onLeftPress={() => this.props.navigation.navigate('Profile')}
-                                           onRightPress={() => this.shareApp()} />
-
                             <HomeProfile />
 
                             <View style={gridContainer}>
 
                                 <View style={rowStyle}>
                                     <View style={colStyle}>
-                                        <Card title="Loans" description="Get a loan" 
-                                              name="calendar" color={Colors.BLUE_COLOR}
+                                        <Card title="Loans" description="Request loan" 
+                                              name="calendar" color={Colors.THEME_COLOR}
                                               onPress={() => this.props.navigation.navigate('Loans')}/>
                                     </View>
                                     <View style={colStyle}>
-                                        <Card title="Wallet" description="Virtual Account" 
-                                              name="credit-card" color={Colors.GREEN_COLOR}
+                                        <Card title="Account" description="Virtual Account" 
+                                              name="credit-card" color={Colors.THEME_COLOR}
                                               onPress={() => this.props.navigation.navigate('Wallet')}/>
                                     </View>
                                 </View>
                                 <View style={rowStyle}>
                                     <View style={colStyle}>
-                                        <Card title="Electricity" description="Pay electricity bills"
-                                            name="bulb" color={Colors.ORANGE_COLOR}
+                                        <Card title="Utilities" description="Pay bills and Send money"
+                                            name="arrow-down" color={Colors.THEME_COLOR}
                                             onPress={() => this.props.navigation.navigate('Terms')}/>
                                     </View>
                                     <View style={colStyle}>
-                                        <Card title="Help" description="Looking for something"
-                                              name="comment" color={Colors.DARK_GREEN_COLOR}
+                                        <Card title="Help" description="Need answers?"
+                                              name="arrow-up" color={Colors.THEME_COLOR}
                                               onPress={() => this.props.navigation.navigate('Help')}  />
                                     </View>
                                 </View>

@@ -30,16 +30,19 @@ class LoanViewComponent extends Component {
                         
                             <Modal animationType="slide"
                                    transparent={false}
+                                   onRequestClose={() => {}}
                                    visible={this.state.openModal}>
 
                                    <ModalComponent closeModal={() => this.setState({openModal: false})}/>
 
                             </Modal>
 
-                            <HeaderBar leftIcon="arrow-left" title="Loans"
-                                       onLeftPress={() => this.props.navigation.goBack()}/>
+                            {/* <HeaderBar leftIcon="arrow-left" title="Loans"
+                                       onLeftPress={() => this.props.navigation.goBack()}/> */}
+
                             <View style={container}>
 
+                                <ListItem onPress={() => this.setState({openModal: true})}/>
                                 <ListItem onPress={() => this.setState({openModal: true})}/>
 
                             </View>

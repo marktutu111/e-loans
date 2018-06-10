@@ -3,15 +3,18 @@ import {
     StyleSheet,
     View,
     Text,
-    Image
+    Image,
+    ScrollView
  } from 'react-native';
 
 import { Container, 
          HeaderBar,
          TabsCard, 
-         Button} from "../../components";
-import colors from "../../resources/styles/colors";
+         Button
+        } from "../../components";
 
+import colors from "../../resources/styles/colors";
+import { LoanViewComponent } from "../../screens";
 
 
 class WalletComponent extends Component {
@@ -30,14 +33,24 @@ class WalletComponent extends Component {
 
                     switch (this.state.tabIndex) {
                         case 0:
-                            return <Text>Loans</Text>
-                            break;
+                            return <LoanViewComponent />
                         case 1:
-                            return <Text>Payments</Text>
-                            break;
-                        case 2:
-                            return <Text>Bills</Text>
-                            break;
+                            return (
+
+                                <View>
+
+                                    <View style={styles.imageContainer}>
+                                            <Image source={require('../../images/wallet.png')}
+                                                style={styles.imageStyle}/>
+                                        </View>
+                                        <View style={styles.amountContainer}>
+                                            <Text>Total Loans</Text>
+                                            <Text style={styles.amountStyle}>1,500</Text>
+                                        </View>
+
+                                </View>
+
+                            )
                         default:
                             break;
                     }
@@ -49,24 +62,21 @@ class WalletComponent extends Component {
                 return (
                     <Container>
 
-                            <HeaderBar leftIcon="arrow-left" onLeftPress={() => this.props.navigation.goBack()}/>
+                            <HeaderBar leftIcon="arrow-left"
+                                       title="Account" 
+                                       onLeftPress={() => this.props.navigation.goBack()}/>
 
-                            <View style={styles.imageContainer}>
-                                <Image source={require('../../images/wallet.png')}
-                                    style={styles.imageStyle}/>
-                            </View>
-                            <View style={styles.amountContainer}>
-                                <Text>Total Loans</Text>
-                                <Text style={styles.amountStyle}>1,500</Text>
-                            </View>
-
-                            <TabsCard tabChanged={(index) => this.setState({tabIndex: index})}/>
-
-                            <View style={styles.contents}>
+                            <ScrollView style={styles.contents}>
 
                                     { this.renderViews() }
 
+                            </ScrollView>
+
+                            <View style={styles.tabsStyle}>
+                                <TabsCard tabChanged={(index) => this.setState({tabIndex: index})}/>
                             </View>
+
+
 
                     </Container>
                 )
@@ -79,12 +89,13 @@ class WalletComponent extends Component {
 
  const styles = StyleSheet.create({
      imageContainer: {
-         width: 50,
-         height: 50,
+         width: 80,
+         height: 80,
          justifyContent: 'center',
          alignItems: 'center',
          marginRight: 'auto',
-         marginLeft: 'auto'
+         marginLeft: 'auto',
+         marginTop: 50,
      },
      imageStyle: {
          width: '100%',
@@ -103,9 +114,15 @@ class WalletComponent extends Component {
      },
      contents: {
          flex: 1,
-         padding: 10,
-         justifyContent: 'center',
-         alignItems: 'center'
+         width: '100%',
+         marginTop: 50,
+     },
+     tabsStyle: {
+         position: 'absolute',
+         bottom: 0,
+         left: 0,
+         right: 0,
+         marginBottom: 20,
      }
  })
 

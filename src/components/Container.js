@@ -17,7 +17,7 @@ class Container extends Component {
         return (
             <View style={[styles.container, this.props.style || {}]}>
                 {/* Replace status on iOS */}
-                {/* <StatusBar hidden={ true }/> */}
+                <StatusBar backgroundColor={colors.THEME_COLOR}/>
                 { this.props.children }
             </View>
         )

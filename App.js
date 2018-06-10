@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { MainRoute, AuthRoute } from "./src/app.routing";
 import { LoginService } from "./src/services";
-import { WalletComponent } from "./src/screens";
+import { WalletComponent, HomeComponent } from "./src/screens";
 
 
 
@@ -23,7 +23,7 @@ export default class App extends Component {
 
         render () {
 
-            return this.renderView();
+            return <WalletComponent />
             
         }
 

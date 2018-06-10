@@ -4,7 +4,9 @@ import { StyleSheet,
          Image,
          View } from 'react-native';
 
-import Colors from "../resources/styles/colors";
+
+import { IconButton } from '.';
+import colors from '../resources/styles/colors';
 
 
 const HomeProfile = () => {
@@ -13,15 +15,20 @@ const HomeProfile = () => {
                 nameTextStyle, textContainer, viewNameStyle } = styles;
 
         return (
-            <View style={profileContainer}>
+            <View style={styles.container}>
 
-                <View style={imageContainer}>
-                    <Image source={require('../images/image.jpeg')} style={imageStyle}/>
-                </View>
-                <View style={textContainer}>
-                    <Text style={nameTextStyle}>Mark Tutu</Text>
-                    <Text style={viewNameStyle}>Home</Text>
-                </View>
+                    <View style={profileContainer}>
+                        <View style={imageContainer}>
+                            <Image source={require('../images/image.jpeg')} style={imageStyle}/>
+                        </View>
+                        <View style={textContainer}>
+                            <Text style={nameTextStyle}>Mark Tutu</Text>
+                            <Text style={viewNameStyle}>Home</Text>
+                        </View>
+                    </View>
+
+                    <IconButton name="settings" size={25} style={styles.iconButtonStyle}/>
+
 
             </View>
         )
@@ -31,6 +38,11 @@ const HomeProfile = () => {
 
 
 const styles = StyleSheet.create({
+        container: {
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexDirection: 'row',
+        },
         profileContainer: {
             height: 'auto',
             padding: 10,
@@ -56,12 +68,14 @@ const styles = StyleSheet.create({
         },
         nameTextStyle: {
             fontSize: 20,
-            color: Colors.THEME_COLOR,
-            fontWeight: 'bold'
+            color: colors.DARK_COLOR,
         },
         viewNameStyle: {
             fontSize: 10,
-            color: Colors.LIGHT_DARK_COLOR
+            color: colors.LIGHT_DARK_COLOR
+        },
+        iconButtonStyle: {
+            marginRight: 10
         }
 })
 

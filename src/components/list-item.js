@@ -7,6 +7,7 @@ import { StyleSheet,
 
  import Colors from "../resources/styles/colors";
  import { BreadCrumb } from "../components";
+import colors from '../resources/styles/colors';
 
 
 
@@ -18,7 +19,7 @@ import { StyleSheet,
 
         return (
 
-            <TouchableOpacity style={container} activeOpacity={0.5} onPress={onPress}>
+            <TouchableOpacity style={container} activeOpacity={0.7} onPress={onPress}>
 
                     <View style={dateContainer}>
                         <Text style={dateMonth}>October</Text>
@@ -52,14 +53,17 @@ import { StyleSheet,
 
  const styles = StyleSheet.create({
      container: {
-         backgroundColor: Colors.WHITE_COLOR,
+         backgroundColor: Colors.THEME_COLOR_LIGHT,
          borderRadius: 10,
          width: '90%',
          marginRight: 'auto',
          marginLeft: 'auto',
          padding: 10,
          flexDirection: 'row',
-         marginBottom: 10
+         marginBottom: 10,
+         shadowColor: colors.DARK_COLOR,
+         shadowOffset: { width: 50, height: 50 },
+         shadowOpacity: 0.5,
      },
      container2: {
          flexDirection: 'row',
@@ -80,19 +84,20 @@ import { StyleSheet,
      dateDay: {
          flex: 1,
          fontSize: 40,
-         color: Colors.LIGHT_DARK_COLOR
+         color: Colors.WHITE_COLOR
      },
      dateMonth: {
-         color: Colors.LIGHT_DARK_COLOR
+         color: Colors.WHITE_COLOR,
+         opacity: 0.5
      },
      hr: {
-         width: 0.5,
+         width: 0.2,
          height: '100%',
-         backgroundColor: Colors.GREEN_COLOR,
+         backgroundColor: Colors.WHITE_COLOR,
      },
      textHeader: {
-         fontWeight: 'bold',
-         color: Colors.LIGHT_DARK_COLOR
+         color: Colors.WHITE_COLOR,
+         opacity: 0.8
      }
 
  })
