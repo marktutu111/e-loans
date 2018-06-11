@@ -6,6 +6,7 @@ import { HomeComponent,
          EditProfileComponent,
          ResetPasswordComponent,
          WalletComponent,
+         LoanComponent,
          SignupComponent } from "./screens";
 
 
@@ -49,8 +50,8 @@ const MainRoute = StackNavigator({
     Home: {
         screen: HomeComponent
     },
-    Loans: {
-        screen: LoanViewComponent
+    Loan: {
+        screen: LoanComponent
     },
     Wallet: {
         screen: WalletComponent

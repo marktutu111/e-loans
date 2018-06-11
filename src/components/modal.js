@@ -106,14 +106,11 @@ import Colors from "../resources/styles/colors";
             backgroundColor: Colors.DARK_COLOR,
             borderRadius: 2,
             width: '70%',
-            height: 'auto',
             padding: 10,
         },
         closeButton: {
             width: 60,
             height: 60,
-            marginRight: 'auto',
-            marginLeft: 'auto',
         }
  })
 

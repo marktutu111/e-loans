@@ -28,18 +28,10 @@ import colors from '../resources/styles/colors';
                     <View style={hr}></View>
                     <View style={dataContainer}>
                         <View style={container2}>
-                            <Text style={textHeader}>Account</Text>
-                            <Text>********912</Text>
+                            <Text style={textHeader}>Amount: </Text>
+                            <Text style={styles.amount}>Gh 300</Text>
                         </View>
-                        <View style={container2}>
-                            <Text style={textHeader}>Employee</Text>
-                            <Text>009912</Text>
-                        </View>
-                        <View style={container2}>
-                            <Text style={textHeader}>Amount</Text>
-                            <Text>300</Text>
-                        </View>
-                        <View style={container2}>
+                        <View style={styles.container3}>
                             <Text style={textHeader}>Status</Text>
                             <BreadCrumb text='PENDING'/>
                         </View>
@@ -53,25 +45,28 @@ import colors from '../resources/styles/colors';
 
  const styles = StyleSheet.create({
      container: {
-         backgroundColor: Colors.THEME_COLOR_LIGHT,
-         borderRadius: 10,
-         width: '90%',
+         backgroundColor: Colors.WHITE_COLOR,
+         width: '100%',
          marginRight: 'auto',
          marginLeft: 'auto',
          padding: 10,
          flexDirection: 'row',
          marginBottom: 10,
-         shadowColor: colors.DARK_COLOR,
-         shadowOffset: { width: 50, height: 50 },
-         shadowOpacity: 0.5,
+         borderBottomColor: colors.INPUT_BORDER_COLOR,
+         borderBottomWidth: 0.3,
      },
      container2: {
-         flexDirection: 'row',
          flexDirection: 'row',
          justifyContent: 'space-between',
          alignItems: 'center',
          marginBottom: 2
      },
+     container3: {
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        marginBottom: 2
+    },
      dataContainer: {
          flex: 3,
          paddingLeft: 10,
@@ -83,21 +78,24 @@ import colors from '../resources/styles/colors';
      },
      dateDay: {
          flex: 1,
-         fontSize: 40,
-         color: Colors.WHITE_COLOR
+         fontSize: 30,
+         color: Colors.THEME_COLOR_LIGHT
      },
      dateMonth: {
-         color: Colors.WHITE_COLOR,
+         color: Colors.LIGHT_DARK_COLOR,
          opacity: 0.5
      },
      hr: {
-         width: 0.2,
+         width: 0.5,
          height: '100%',
-         backgroundColor: Colors.WHITE_COLOR,
+         backgroundColor: Colors.LIGHT_GREY_COLOR,
      },
      textHeader: {
-         color: Colors.WHITE_COLOR,
-         opacity: 0.8
+         color: Colors.DARK_COLOR,
+         marginRight: 10,
+     },
+     amount: {
+         fontSize: 25,
      }
 
  })

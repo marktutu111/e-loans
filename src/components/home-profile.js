@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
         },
         viewNameStyle: {
             fontSize: 10,
-            color: colors.WHITE_COLOR
+            color: colors.LIGHT_DARK_COLOR
         },
         iconButtonStyle: {
             marginRight: 10

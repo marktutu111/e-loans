@@ -41,13 +41,6 @@ class LoanViewComponent extends Component {
 
                                 <ListItem onPress={() => this.setState({openModal: true})}/>
                                 <ListItem onPress={() => this.setState({openModal: true})}/>
-                                <ListItem onPress={() => this.setState({openModal: true})}/>
-                                <ListItem onPress={() => this.setState({openModal: true})}/>
-                                <ListItem onPress={() => this.setState({openModal: true})}/>
-                                <ListItem onPress={() => this.setState({openModal: true})}/>
-                                <ListItem onPress={() => this.setState({openModal: true})}/>
-                                <ListItem onPress={() => this.setState({openModal: true})}/>
-                                <ListItem onPress={() => this.setState({openModal: true})}/>
 
                             </View>
 

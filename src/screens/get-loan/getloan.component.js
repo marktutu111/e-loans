@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
             width: '90%',
             height: 50,
             backgroundColor: colors.WHITE_COLOR,
-            elevation: 0.5,
+            elevation: 0.8,
             marginRight: 'auto',
             marginLeft: 'auto',
         },

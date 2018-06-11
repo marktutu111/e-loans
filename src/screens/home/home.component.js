@@ -33,7 +33,7 @@ class HomeComponent extends Component {
 
                     return (
 
-                        <Container style={{ backgroundColor: colors.THEME_COLOR_LIGHT }}>
+                        <Container>
 
                             <HomeProfile />
 
@@ -43,7 +43,7 @@ class HomeComponent extends Component {
                                     <View style={colStyle}>
                                         <Card title="Loan" description="Request loan" 
                                               name="calendar" color={Colors.DARK_COLOR}
-                                              onPress={() => this.props.navigation.navigate('Loans')}/>
+                                              onPress={() => this.props.navigation.navigate('Loan')}/>
                                     </View>
                                     <View style={colStyle}>
                                         <Card title="Account" description="Virtual Account" 
